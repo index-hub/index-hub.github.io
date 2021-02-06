@@ -23,8 +23,9 @@
 
     let url = get('state');
     let code = get('code');
+    let error = get('error');
     if (url && url.indexOf('http') !== -1) {
-        window.location = decodeURIComponent(url) + "?code=" + code;
+        window.location = decodeURIComponent(url) + "?code=" + code + "&error=" + error;
     } else {
         document.write(code);
     }
